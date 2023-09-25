@@ -256,6 +256,8 @@
 }
 
 .auth-form__header {
+  margin-top: 10px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -342,7 +344,30 @@
   background-color: var(--white-color);
 }
 
+/* Login form */
 
+.auth-form__help {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.auth-form__help-link {
+  font-size: 1.4rem;
+  text-decoration: none;
+}
 
+.auth-form__help-separate {
+  display: block;
+  height: 22px;
+  margin: -2px 16px 0;
+  border-left: 1px solid #eaeaea ;
+}
+
+.auth-form__help-link:first-child {
+  color: var(--primary-color);
+}
+
+.auth-form__help-link:nth-child(3) {
+  color: #939393;
+}
 
