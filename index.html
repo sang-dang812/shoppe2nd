@@ -19,6 +19,7 @@
   <div class="app">
     <header class="header">
       <div class="grid">
+        <!-- nav bar -->
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item navbar__item-separate navbar__item--qr">Vào cửa hàng trên ứng dụng F8 shop
@@ -119,7 +120,7 @@
             </li>
           </ul>
         </nav>
-        <!-- search -->
+        <!-- search and cart -->
         <div class="search">
           <div class="search__logo">
             <svg viewBox="0 0 192 65" class="search__logo-img">
@@ -170,8 +171,16 @@
             </button>
           </div>
 
+          <!-- cart -->
           <div class="header__cart">
-            <i class="header__cart-icon fas fa-shopping-cart"></i>
+            <div class="header__cart-wrap">
+              <i class="header__cart-icon fas fa-shopping-cart"></i>
+              <span class="header__cart-notice">3</span>
+              <!-- .header__cart-list--no-cart IF the cart is empty -->
+              <div class="header__cart-list">
+                <img src="./assets/img/empty-cart.png.webp" alt="" class="header__cart-no-cart-img">
+              </div>
+            </div>
           </div>
         </div>
       </div>

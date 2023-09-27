@@ -69,7 +69,7 @@
   left:0;
   top:160%;
   padding:8px;
-  border-radius: 2px;
+  border-radius: 5px;
   display: none;
   animation: fadeIn ease-in 0.4s;
 }
@@ -126,6 +126,7 @@
   -o-animation: notiGrow ease-in 0.2s;
   -ms-animaton: notiGrow ease-in 0.2s; 
   display: none;
+  z-index: 1;
 }
 
 /* Arrow on the notification */
@@ -145,7 +146,7 @@
   display: block;
   position: absolute;
   height: 20px;
-  width: 84px;
+  width: 100px;
   right:0;
   top:-16px;
 }
@@ -283,7 +284,7 @@
   padding: 0 12px;
   font-size: 1.4rem;
   border: solid 1px var(--border-color);
-  border-radius: 2px;
+  border-radius: 5px;
   outline: none;
 }
 
@@ -400,9 +401,72 @@
   text-align: center;
 }
 
+.header__cart-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
 .header__cart-icon {
   font-size: 2.4rem;
   color: var(--white-color);
+}
+
+.header__cart-notice {
+  position: absolute;
+  right: -4px;
+  top: -8px;
+  padding: 1px 6px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  border: 2px solid #ee4d2d;
+  border-radius: 10px;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+}
+
+.header__cart-wrap:hover .header__cart-list {
+  display: block;
+}
+
+.header__cart-list {
+  cursor: default;
+  position: absolute;
+  right: -3px;
+  top: calc(100% + 10px);
+  background-color: var(--white-color);
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.2);
+  display: none;
+  animation: fadeIn ease-in 0.2s;
+}
+
+.header__cart-list::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: -25px;
+  display: block;
+  border-width: 16px 20px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+}
+.header__cart-list--no-cart {
+  padding: 24px 0; 
+}
+
+.header__cart-list--no-cart .header__cart-no-cart-img {
+  display: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__cart-no-cart-img {
+  width: 60%;
+  display: none;
 }
 
 .search__input-box-wrap {
@@ -423,6 +487,7 @@
   box-shadow: 0 1px 1px #999;
   overflow: hidden;
   display: none;
+  animation: fadeIn ease-in 0.2s;
 }
 
 .search__history-list {
@@ -445,6 +510,7 @@
   color: var(--text-color);
   font-size: 1.4rem;
   line-height: 38px;
+  /* display: block; */
 }
 
 .search__history-heading {
@@ -558,7 +624,7 @@
   background: var(--primary-color);
   height: 34px;
   width: 60px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .search__input-search-btn:hover {
